@@ -12,7 +12,7 @@
  * Photo - the photo of the article
 
 
-### To view the deployed version, _**[click here!](https://mongo-scraper-principio.herokuapp.com/)**_
+### To view the deployed version, _**[click here!](https://???.herokuapp.com/)**_
 
 ## Technologies used:
 * Node.js
