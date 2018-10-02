@@ -6,13 +6,11 @@ const express = require('express'),
   db = require('../models');
 
 //route to scrape new articles
-router.get("/newArticles", function (req, res) {
+router.get("/newArticles",  (req, res)=> {
   //configuring options object for request-promist
   const options = {
     uri: 'http://www.astronomy.com/news',
-    transform: function (body) {
-      return cheerio.load(body);
-    }
+    transform:  body => cheerio.load(body)
   };
   //calling the database to return all saved articles
   db.Article
@@ -43,11 +41,7 @@ router.get("/newArticles", function (req, res) {
               img: modifiedImageLink
 
 
-              // storyUrl: $(element).find('.story-body>.story-link').attr('href'),
-              // headline: $(element).find('h2.headline').text().trim(),
-              // summary : $(element).find('p.summary').text().trim(),
-              // imgUrl  : $(element).find('img').attr('src'),
-              // byLine  : $(element).find('p.byline').text().trim()
+              
             });
             console.log(newArticle)
             //checking to make sure newArticle contains a storyUrl
@@ -58,7 +52,7 @@ router.get("/newArticles", function (req, res) {
                 newArticleArr.push(newArticle);
               }
             }
-          });//end of each function
+          });
 
           //adding all new articles to database
           db.Article
@@ -66,9 +60,9 @@ router.get("/newArticles", function (req, res) {
             .then(result => res.json({ count: newArticleArr.length }))//returning count of new articles to front end
             .catch(err => { });
         })
-        .catch(err => console.log(err)); //end of rp method
+        .catch(err => console.log(err)); 
     })
-    .catch(err => console.log(err)); //end of db.Article.find()
-});// end of get request to /scrape
+    .catch(err => console.log(err)); 
+});
 
 module.exports = router;

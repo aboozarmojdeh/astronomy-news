@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  //function to post a note to server
+  
   function sendNote(element) {
     let note = {};
     note.articleId = $(element).attr('data-id'),
@@ -20,16 +20,16 @@ $(document).ready(function () {
         }
       });
     }
-  }//end of sendNote function
+  }
 
 
-  //function to display error modal on ajax error
+  
   function showErrorModal(error) {
     $('#error').modal('show');
   }
 
 
-  //function to display notes in notemodal
+  
   function showNote(element, articleId){
     let $title = $('<p>')
       .text(element.title)
@@ -43,15 +43,14 @@ $(document).ready(function () {
       .attr('data-article-id', articleId)
       .addClass('note')
       .appendTo('#noteArea');
-  }//end of showNote function
+  }
 
-  //event listener to reload root when user closes modal showing
-  //number of scraped articles
+ 
   $('#alertModal').on('hide.bs.modal', function (e) {
     window.location.href = '/';
   });
 
-  //click event to scrape new articles
+  
   $('#scrape').on('click', function (e){
     e.preventDefault();
     $.ajax({
@@ -68,9 +67,9 @@ $(document).ready(function () {
         $('#alertModal').modal('show');
       }
     });
-  });//end of #scrape click event
+  });
 
-  //click event to save an article
+  
   $(document).on('click', '#saveArticle', function (e) {
     let articleId = $(this).data('id');
     $.ajax({
@@ -83,9 +82,9 @@ $(document).ready(function () {
         showErrorModal(error);
       }
     });
-  });//end of #saveArticle click event
+  });
 
-  //click event to open note modal and populate with notes
+ 
   $('.addNote').on('click', function (e){
     $('#noteArea').empty();
     $('#noteTitleEntry, #noteBodyEntry').val('');
@@ -104,22 +103,22 @@ $(document).ready(function () {
         showErrorModal(error);
       }
     });
-  });//end of .addNote click event
+  });
 
-  //click event to create a note
+  
   $('#submitNote').on('click', function (e) {
     e.preventDefault();
     sendNote($(this));
-  });//end of #submitNote click event
+  });
 
-  //keypress event to allow user to submit note with enter key
+ 
   $('#noteBodyEntry').on('keypress', function (e) {
     if(e.keyCode === 13){
       sendNote($(this));
     }
-  });//end of #noteBodyEntry keypress(enter) event
+  });
 
-  //click event to delete an article from savedArticles
+  
   $('.deleteArticle').on('click', function (e){
     e.preventDefault();
     let id = $(this).data('id');
@@ -133,9 +132,9 @@ $(document).ready(function () {
         showErrorModal(error);
       }
     });
-  });//end of .deleteArticle click event
+  });
 
-  //click event to delete a note from a saved article
+ 
   $(document).on('click', '.deleteNote', function (e){
     e.stopPropagation();
     let thisItem = $(this);
@@ -155,10 +154,9 @@ $(document).ready(function () {
         showErrorModal(error);
       }
     });
-  });//end of .deleteNote click event
+  });
 
-  //click event to retrieve the title and body of a single note
-  //and populate the note modal inputs with it
+  
   $(document).on('click', '.note', function (e){
     e.stopPropagation();
     let id = $(this).data('note-id');
@@ -174,6 +172,6 @@ $(document).ready(function () {
         showErrorModal(error);
       }
     });
-  }); //end of .note click event
+  }); 
 
-});//end of document ready function
+});

@@ -18,12 +18,12 @@ const config = require('./config/database');
 mongoose.Promise = Promise;
 mongoose
   .connect(config.database)
-  .then( function(result) {
-    console.log(`Connected to database '${result.connections[0].name}' on ${result.connections[0].host}:${result.connections[0].port}`);
-  })
-  .catch(function(err){ 
+  .then( result=> 
+    console.log(`Connected to database '${result.connections[0].name}' on ${result.connections[0].host}:${result.connections[0].port}`)
+  )
+  .catch(err=> 
   console.log('There was an error with your connection:', err)
-  });
+  );
 
 //setting up favicon middleware
 app.use(favicon(path.join(__dirname, 'public', 'assets/img/favicon.png')));

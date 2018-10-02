@@ -10,6 +10,6 @@ const noteSchema = new Schema({
 
 const Note = mongoose.model("Note", noteSchema);
 
-// Export the Note model
+
 module.exports = Note;
-// const Note = module.exports = mongoose.model('Note', noteSchema);
+

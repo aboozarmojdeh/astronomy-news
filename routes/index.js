@@ -4,14 +4,11 @@ const express = require('express'),
       db = require("../models");
 
 //get route to root, populating index.handlebars with articles
-router.get('/', function(req,res) {
+router.get('/', (req,res) => {
   db.Article
     .find({})
-    .then(function(articles) 
-      {res.render('index', {articles})
-    })
-    .catch(function(err) {
-      res.json(err)});
+    .then(articles => {res.render('index', {articles})})
+    .catch(err => res.json(err));
 });
 
 module.exports = router;

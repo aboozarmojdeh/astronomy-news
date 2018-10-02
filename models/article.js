@@ -14,7 +14,7 @@ const articleSchema = new Schema({
     type: String,
     required:true
   },
-// `image` is required and of type String
+
   img:{
     type: String,
     required:true
@@ -23,9 +23,7 @@ const articleSchema = new Schema({
     type: Boolean,
     default: false
   },
-  // `note` is an object that stores a Note id
-  // The ref property links the ObjectId to the Note model
-  // This allows us to populate the Article with an associated Note
+  
   notes: [
   {
     type: Schema.Types.ObjectId,
@@ -37,6 +35,6 @@ const articleSchema = new Schema({
 
 const Article = mongoose.model("Article", articleSchema);
 
-// Export the Article model
+
 module.exports = Article;
-// const Article = module.exports = mongoose.model('Article', articleSchema);
+
