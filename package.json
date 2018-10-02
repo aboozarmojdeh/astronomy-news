@@ -11,14 +11,14 @@
   "homepage": "https://github.com/aboozarmojdeh/astronomy-news",
   "dependencies": {
     "axios": "^0.18.0",
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.18.3",
     "cheerio": "^1.0.0-rc.2",
-    "express": "^4.16.2",
+    "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
-    "mongoose": "^5.0.0-rc2",
-    "morgan": "^1.9.0",
-    "request": "^2.83.0",
+    "mongoose": "^5.3.1",
+    "morgan": "^1.9.1",
+    "request": "^2.88.0",
     "request-promise": "^4.2.2",
-    "serve-favicon": "^2.4.5"
+    "serve-favicon": "^2.5.0"
   }
 }
