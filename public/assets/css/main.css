@@ -1,0 +1,326 @@
+
+/************************************* Global CSS *************************************/
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+:root {
+  --header-height: 30em;
+}
+
+body {
+  background-image: url('../img/astronomy-bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 200%;
+  background-position: center center;
+  font-size: 62.5%;
+  font-family: arial;
+  margin: 0;
+  padding: 0;
+}
+
+a:active {
+  outline: none;
+}
+button:focus {
+  outline: none;
+}
+
+
+
+
+/**************************** header CSS ****************************/
+
+
+
+
+.header {
+  background-image: url('../img/astronomy-header.jpg');
+  background-color: #181818;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  position: fixed;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 100;
+  border-bottom: 5px solid white;
+}
+
+
+#neon {
+  color: white;
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	-webkit-transform: translate(-50%, 20%);
+	        transform: translate(-50%, 20%);
+	font-size: 7em;
+	margin: 0;
+	padding: 0 20px;
+  /* font-family: 'Playfair Display', serif; */
+  /* font-family: 'Lobster', cursive; */
+  font-family: 'Abril Fatface', cursive;
+	text-shadow: 0 0 20px #FDB813;
+}
+
+#neon:after {
+	content: '[ WEB-SCRAPER ]';
+	color: blue;
+	position: absolute;
+	padding: 0 20px;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	-webkit-filter: blur(15px);
+	        filter: blur(15px);
+}
+
+#neon:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: greenyellow;
+	z-index: -2;
+	-webkit-filter: blur(40px);
+	        filter: blur(40px);
+	opacity: 0.5;
+}
+
+.button-dark {
+  font-size: 2.2em;
+  padding: 0.7em 1.3em;
+  font-weight: 600;
+  border: 2px while solid;
+  border-radius: 5px;
+  background: none;
+  color: white;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  margin: 1em 1em 1em 0.25em;
+}
+
+.button-dark:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.button-group {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#viewSaved {
+  left: 11.5%;
+}
+
+.filler {
+  width: 100%;
+  height: var(--header-height);
+}
+
+
+
+
+/***************************** modal CSS *****************************/
+
+
+
+
+.modal-content {
+  /* background-image: url('../img/notepad-background.jpg'); */
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  /* background-attachment: fixed; */
+  background-position: center 12%;
+  border-radius: 4px;
+   font-family: 'Playfair Display', serif;
+  color: #777;
+
+}
+
+.modal-body {
+  padding-top: 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.noteInput {
+  width: 100%;
+  height: 2em;
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  border-bottom: 2px solid #777;
+}
+
+#submitNote {
+  background: transparent;
+  border: 2px solid #777;
+  font-size: 2em;
+}
+
+.instructions {
+  display: inline-block;
+  margin-right: 5em;
+}
+
+.note {
+  background: transparent;
+  margin-top: 5px;
+  height: 3em;
+  position: relative;
+  cursor: pointer;
+}
+.noteTitle {
+  display: inline-block;
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.deleteNote {
+  font-size: 2.5em;
+  background: transparent;
+  color: #777;
+  border: none;
+}
+
+
+
+
+/************************ panel CSS ************************/
+
+
+
+
+.storyPanel {
+	/* background-image: url('../img/panel-background.jpg'); */
+  /* background-color: #777; */
+  background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+	padding: 20px;
+	border-radius: 20px;
+	border: 3px solid #FF0000;
+	position: relative;
+  margin: 50px 20px;
+  opacity: 0.9;
+}
+
+.imgBox {
+  overflow: hidden;
+  border: 3px solid rgb(5, 62, 250);
+}
+
+.imgBox:hover .storyImg{
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.storyImg {
+	float: right;
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+}
+
+.storyHeadline {
+	font-size: 3.5em;
+  font-style: italic;
+  text-decoration: underline;
+  color:white;
+  -webkit-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+
+.storyHeadline:hover {
+	color: #777;
+}
+
+.storyPanel a {
+	text-decoration: none;
+	color: #ddd;
+}
+
+.storySummary {
+	font-size: 2.5em;
+}
+
+.storyButton {
+  font-size: 2.5em;
+  padding: 5px 30px;
+  border: 3px solid rgb(5, 62, 250);
+  background: none;
+  font-weight: 600;
+  color: #ddd;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  margin-right:10px;
+  border-radius: 10px;
+}
+
+.storyButton:hover {
+  color: #777;
+  background: rgb(19, 16, 16);
+  border: 3px solid rgb(10, 211, 211);
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/************************ neon title animation CSS ************************/
+
+
+#neon:before {
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 60ms;
+          animation-duration: 60ms;
+}
+
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-filter: blur(30px);
+		        filter: blur(30px);
+	}
+	50% {
+		-webkit-filter: blur(40px);
+		        filter: blur(40px);
+	}
+	100% {
+		-webkit-filter: blur(30px);
+		        filter: blur(30px);
+
+}
+}
+
+@keyframes pulse {
+	0% {
+		-webkit-filter: blur(30px);
+		        filter: blur(30px);
+	}
+	50% {
+		-webkit-filter: blur(40px);
+		        filter: blur(40px);
+	}
+	100% {
+		-webkit-filter: blur(30px);
+		        filter: blur(30px);
+
+}
+}
