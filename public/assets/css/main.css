@@ -61,8 +61,6 @@ button:focus {
 	font-size: 7em;
 	margin: 0;
 	padding: 0 20px;
-  /* font-family: 'Playfair Display', serif; */
-  /* font-family: 'Lobster', cursive; */
   font-family: 'Abril Fatface', cursive;
 	text-shadow: 0 0 20px #FDB813;
 }
@@ -135,10 +133,8 @@ button:focus {
 
 
 .modal-content {
-  /* background-image: url('../img/notepad-background.jpg'); */
-  /* background-repeat: no-repeat; */
+  
   background-size: cover;
-  /* background-attachment: fixed; */
   background-position: center 12%;
   border-radius: 4px;
    font-family: 'Playfair Display', serif;
@@ -148,9 +144,14 @@ button:focus {
 
 .modal-body {
   padding-top: 0;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
+
+#numArticles{
+  color:black;
+}
+
 
 .noteInput {
   width: 100%;
@@ -201,8 +202,7 @@ button:focus {
 
 
 .storyPanel {
-	/* background-image: url('../img/panel-background.jpg'); */
-  /* background-color: #777; */
+	
   background-repeat: no-repeat;
 	background-size: cover;
 	color: white;

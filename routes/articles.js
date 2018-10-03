@@ -27,5 +27,13 @@ router.delete('/deleteArticle/:id', function(req,res){
     .catch(err => res.json(err));
 });
 
+// //delete route to remove all articles from mainPage
+router.delete('/deleteAll', function(req,res){
+  db.Article
+    .remove({})
+    .then(result => res.json(result))
+    .catch(err => res.json(err));
+});
+
 
 module.exports = router;

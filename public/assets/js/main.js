@@ -51,13 +51,13 @@ $(document).ready(function () {
   });
 
   
-  $('#scrape').on('click', function (e){
-    e.preventDefault();
+  $('#scrape').on('click', function (){
+    event.preventDefault();
     $.ajax({
       url: '/scrape/newArticles',
       type: 'GET',
       success: function (response) {
-        console.log("number of articles:",response)
+        console.log("number of articles:")
         $('#numArticles').text(response.count);
       },
       error: function (error) {
@@ -127,6 +127,22 @@ $(document).ready(function () {
       type: 'DELETE',
       success: function (response) {
         window.location.href = '/articles/viewSaved';
+      },
+      error: function (error) {
+        showErrorModal(error);
+      }
+    });
+  });
+
+
+  $('#deleteAll').on('click', function (e){
+    e.preventDefault();
+    // let id = $(this).data('id');
+    $.ajax({
+      url: '/articles/deleteAll',
+      type: 'DELETE',
+      success: function (response) {
+        window.location.href = '/';
       },
       error: function (error) {
         showErrorModal(error);
