@@ -12,7 +12,7 @@
  * Photo - the photo of the article
 
 
-### To view the deployed version, _**[click here!](https://astronomynews.herokuapp.com//)**_
+### To view the deployed version, _**[click here!](https://astronomynews.herokuapp.com/)**_
 
 ## Technologies used:
 * Node.js
