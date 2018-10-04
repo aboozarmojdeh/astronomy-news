@@ -30,12 +30,13 @@
 * CSS3 (including css animations and transitions)
 * HTML5
 
-```
+
 
 ### Author: Aboozar Mojdeh
 - - -
-
-* https://www.linkedin.com/in/aboozar-mojdeh
-* https://github.com/aboozarmojdeh
-* http://www.webyouweb.com
+### My LinkedIn <a href="https://www.linkedin.com/in/aboozar-mojdeh" target="_blank">click here!</a>
+### My GitHub <a href="https://github.com/aboozarmojdeh" target="_blank">click here!</a>
+### My Portfolio <a href="http://www.webyouweb.com" target="_blank">click here!</a>
 - - -
+
+
