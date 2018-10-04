@@ -30,4 +30,12 @@
 * CSS3 (including css animations and transitions)
 * HTML5
 
+```
 
+### Author: Aboozar Mojdeh
+- - -
+
+* https://www.linkedin.com/in/aboozar-mojdeh
+* https://github.com/aboozarmojdeh
+* http://www.webyouweb.com
+- - -

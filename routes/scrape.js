@@ -31,7 +31,7 @@ router.get("/newArticles",  (req, res)=> {
               .children().find("img")
               .attr("src");
             let modifiedImageLink = imageLink.replace(/ /g, "%20")
-            console.log("image link:"+modifiedImageLink)
+            // console.log("image link:"+modifiedImageLink)
             /////////////////////////
 
             let newArticle = new db.Article({
@@ -43,7 +43,7 @@ router.get("/newArticles",  (req, res)=> {
 
               
             });
-            console.log(newArticle)
+            // console.log(newArticle)
             //checking to make sure newArticle contains a storyUrl
             if (newArticle.link) {
               //checking if new article matches any saved article, if not add it to array
@@ -57,7 +57,11 @@ router.get("/newArticles",  (req, res)=> {
           //adding all new articles to database
           db.Article
             .create(newArticleArr)
-            .then(result => res.json({ count: newArticleArr.length }))//returning count of new articles to front end
+            .then(result => {
+              console.log(result)
+              console.log("array:",newArticleArr)
+              return res.json({ count: newArticleArr.length })
+            })//returning count of new articles to front end            
             .catch(err => { });
         })
         .catch(err => console.log(err)); 

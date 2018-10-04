@@ -51,8 +51,8 @@ $(document).ready(function () {
   });
 
   
-  $('#scrape').on('click', function (){
-    event.preventDefault();
+  $('#scrape').on('click', function (e){
+    e.preventDefault();
     $.ajax({
       url: '/scrape/newArticles',
       type: 'GET',
