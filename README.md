@@ -35,7 +35,6 @@
 ### Author: Aboozar Mojdeh
 - - -
 ### My LinkedIn <a href="https://www.linkedin.com/in/aboozar-mojdeh" target="_blank">click here!</a>
-### My GitHub <a href="https://github.com/aboozarmojdeh" target="_blank">click here!</a>
 ### My Portfolio <a href="http://www.webyouweb.com" target="_blank">click here!</a>
 - - -
 
